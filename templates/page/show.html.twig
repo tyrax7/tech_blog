@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello PageController!{% endblock %}
+
+{% block body %}
+<h1>Tech blog</h1>
+<p>Lastest articles about IT and development</p>
+<div class="post">
+<h2>{{ post.title }}</h2>
+<p>{{ post.content }}</p>
+
+</div>
+{{ form_start(commentForm) }}
+        {{ form_widget(commentForm) }}
+        <button class="btn">{{ button_label|default('save') }}</button>
+    {{ form_end(commentForm) }}
+{% endblock %}
